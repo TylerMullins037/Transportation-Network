@@ -83,7 +83,7 @@ vector<string> citiesWithinDistance(map<string, City>& cities, string startCity,
     }
 
     // Add the start city to the queue
-    bfsQueue.push({startCity, 0});
+    bfsQueue.push({ startCity, 0 });
     visited[startCity] = true;
 
     // Perform breadth-first search
@@ -103,7 +103,7 @@ vector<string> citiesWithinDistance(map<string, City>& cities, string startCity,
 
                 // If the neighbor is not visited, add it to the queue
                 if (!visited[neighborCity]) {
-                    bfsQueue.push({neighborCity, currentDistance + neighborDistance});
+                    bfsQueue.push({ neighborCity, currentDistance + neighborDistance });
                     visited[neighborCity] = true;
                 }
             }
@@ -131,3 +131,6 @@ vector<string> findIsolatedCities(map<string, City>& cities) {
 
     return isolatedCities;
 }
+
+
+
